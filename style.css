@@ -1,0 +1,371 @@
+:root {
+  --ff-primary: Poppins, sanserif;
+  --ff-secondary: Heebo, cursive;
+  --ff-sub: Bungee Shade, cursive;
+  --color-text: rgba(116, 113, 113, 0.767);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bungee Shade', 'cursive';
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url('/images/background.jpg');
+  object-fit: cover;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.navbar {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.shopping-bag {
+  background: rgba(116, 113, 113, 0.767);
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.shopping-bag a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.shopping-bag .total-items-in-cart {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.container {
+  width: 100vw;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  margin-top: 2rem;
+}
+.container .card {
+  position: relative;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card_header::after {
+  content: 'Nike';
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(116, 113, 113, 0.767);
+  z-index: 1;
+}
+
+.stacked {
+  display: grid;
+}
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.product-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.card-content {
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  transition: 1s;
+  z-index: 10;
+}
+.card {
+  border-radius: 20px;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.1s;
+}
+
+.size h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.card .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  cursor: pointer;
+}
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.card:hover .btn {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+.btn {
+  cursor: pointer;
+}
+.card .size span:hover {
+  background: #9bdc28;
+}
+.card_price {
+  font-size: 1.75rem;
+}
+.card_img {
+  width: 100%;
+  aspect-ratio: 1 / 1.25;
+  object-fit: cover;
+}
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: var(--color-text);
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-row {
+  display: flex;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: var(--color-text);
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: var(--color-text);
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-danger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #eb5757;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
+
+.btn-danger:hover {
+  background-color: #cc4c4c;
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56ccf2;
+  background-color: #eee;
+  color: var(--color-text);
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: var(--color-text);
+  font-size: 1.1em;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
+}
+
+.cart-item .unit-price {
+  flex: 1;
+  font-size: 1.2rem;
+}
+/* units */
+.cart-item .unit {
+  flex: 1;
+}
+.cart-item .unit .number {
+  margin: 0 10px;
+
+  font-size: 1.2rem;
+}
+.unit .btn {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  user-select: none;
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.footer a {
+  text-decoration: none;
+  color: rgba(41, 40, 40, 0.767);
+}
+.social span {
+  justify-content: space-evenly;
+  padding: 0 0.5em;
+  flex-grow: 1;
+  text-align: end;
+}
+
+@media (min-width: 60em) {
+  .card_img {
+    aspect-ratio: 1 / 1;
+  }
+}

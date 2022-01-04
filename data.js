@@ -1,0 +1,51 @@
+const products = [
+  {
+    id: 1,
+    img: './images/shoe1.jpg',
+    title: 'Nike Runner Red',
+    price: 220,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 2,
+    img: './images/shoe2.jpg',
+    title: 'Nike Stripe',
+    price: 200,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 3,
+    img: './images/shoe3.jpg',
+    title: 'Nike Jogger',
+    price: 120,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 4,
+    img: './images/shoe4.jpg',
+    title: 'Nike Dirt Brown',
+    price: 105,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 5,
+    img: './images/shoe5.jpg',
+    title: 'Nike Chill',
+    price: 105,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 6,
+    img: './images/shoe6.jpg',
+    title: 'Nike Runner Neon',
+    price: 129,
+    size: [8, 9, 10, 11, 12],
+  },
+  {
+    id: 7,
+    img: './images/shoe7.jpg',
+    title: 'Nike Hoop Black',
+    price: 250,
+    size: [8, 9, 10, 11, 12],
+  },
+];
